@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../Documents/Codex/2026-04-25/files-mentioned-by-the-user-expenses"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CSS-Python Full Stack",
+		"liveServer.settings.port": 5501
+	}
+}
