@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(248, 248, 191, 0.943);
+        }
+        .class1{
+            background-color: bisque;
+        }
+        .class2{
+            color: brown;
+        }
+        .class3{
+                font-size: 50px;
+        }
+        #list>li{
+            color: bisque;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+<h1>Ranjith Kumar</h1>
+<h1>this about class list</h1>
+<p>classList is a DOM API that lets you add, remove, check, or toggle CSS classes on an element without touching the whole className string. It’s cleaner and safer than manually editing element.className.</p>
+   <p>hgfdszdfgh</p>
+   <h1>List</h1>
+   <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+   </ul>
+   
+   
+   <script>
+//class list
+//     classlist.add()
+//     classlist.remove()
+//     classlist.contains()
+//     classlist.toggle()
+
+//     classlist.add()
+        let para=document.querySelector("p")
+        para.classList.add("class1")
+        para.classList.add("class2")
+        para.classList.add("class3")
+        
+        //     classlist.add()
+
+        let h1=document.querySelector("h1")
+        h1.classList.add("class1")
+        h1.classList.add("class2")
+        h1.classList.add("class3")
+
+        //     classlist.remove()
+        para.classList.remove("class3")
+
+        //     classlist.contains()
+        let isclass=para.classList.contains("class3")
+        console.log(isclass);
+
+// classList.toggle("className") as a switch:
+// If the class is ON (present), toggle will turn it OFF (remove it).
+// If the class is OFF (missing), toggle will turn it ON (add it).
+        para.classList.toggle("class3") //add the class3
+        para.classList.toggle("class3") // remove the class3
+       
+        let item = document.querySelectorAll("li");
+
+        for (let i of item) {
+            i.innerText = "Rajini";
+        }
+        let listItem=document.querySelectorAll("#list>li")
+    </script>
+</body>
+</html>

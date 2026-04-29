@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"></div>
+     <div class="box"></div>
+      <div class="box"></div>
+       <div class="box"></div><br>
+      <div> 
+    <h1>Style changing in js</h1>
+    <p>In JavaScript DOM manipulation, you can change styles directly through the .style property of an element. Since querySelectorAll gives you a NodeList, you need to loop through each element to apply styles.</p>
+    </div> <script>
+let boxes = document.querySelectorAll(".box");
+
+for (let b of boxes) {
+  b.style.backgroundColor = "red";
+  b.style.width = "200px";
+  b.style.height = "100px";
+  b.style.border = "2px solid black";
+    b.style.display="flex";
+    b.style.float="left";
+
+}
+let para=document.querySelectorAll("p")
+ console.dir(para);
+ para.style.backgroundColor="aqua";
+ para.style.color="black";
+
+
+
+
+    </script>
+</body>
+</html>

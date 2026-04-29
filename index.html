@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in!</title>
+    <meta
+      name="description"
+      content="Premium responsive authentication UI with sign in and sign up flows."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="background-layer" aria-hidden="true">
+        <div class="gradient-orb orb-a"></div>
+        <div class="gradient-orb orb-b"></div>
+        <div class="gradient-orb orb-c"></div>
+        <div class="grid-glow"></div>
+        <div class="particles" id="particles"></div>
+      </div>
+
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Nebula home">
+          <span class="brand-mark"></span>
+          <span class="brand-copy">
+            <strong>Nebula</strong>
+            <span>Auth Experience</span>
+          </span>
+        </a>
+
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Toggle color theme"
+        >
+          <span class="theme-toggle-track">
+            <span class="theme-icon sun">☼</span>
+            <span class="theme-icon moon">◐</span>
+          </span>
+        </button>
+      </header>
+
+      <main class="auth-layout">
+        <section class="hero-panel">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            Startup-grade auth UI
+          </div>
+          <h1>Craft trust on the very first screen.</h1>
+          <p class="hero-copy">
+            A refined authentication experience with glass surfaces, modern
+            motion, OTP verification, strength feedback, and polished form
+            states built to impress recruiters and users alike.
+          </p>
+
+          <div class="hero-metrics">
+            <article class="metric-card">
+              <strong>99.9%</strong>
+              <span>Secure session continuity</span>
+            </article>
+            <article class="metric-card">
+              <strong>3s</strong>
+              <span>Average sign-in completion flow</span>
+            </article>
+          </div>
+
+          <div class="feature-strip">
+            <div class="feature-pill">Responsive by default</div>
+            <div class="feature-pill">Local storage memory</div>
+            <div class="feature-pill">Dark mode aware</div>
+          </div>
+        </section>
+
+        <section class="auth-panel">
+          <div class="panel-glow"></div>
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Welcome back</p>
+              <h2 id="panelTitle">Sign in to Nebula</h2>
+            </div>
+            <div class="mode-switch" role="tablist" aria-label="Authentication mode">
+              <button
+                class="mode-btn active"
+                id="signInTab"
+                type="button"
+                data-mode="signin"
+                role="tab"
+                aria-selected="true"
+              >
+                Sign In
+              </button>
+              <button
+                class="mode-btn"
+                id="signUpTab"
+                type="button"
+                data-mode="signup"
+                role="tab"
+                aria-selected="false"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+
+          <div class="form-stage" id="formStage">
+            <form class="auth-form active" id="signInForm" novalidate>
+              <div class="field">
+                <input id="signinEmail" name="email" type="email" placeholder=" " />
+                <label for="signinEmail">Email address</label>
+                <small class="error" data-error-for="signinEmail"></small>
+              </div>
+
+              <div class="field">
+                <input
+                  id="signinPassword"
+                  name="password"
+                  type="password"
+                  placeholder=" "
+                />
+                <label for="signinPassword">Password</label>
+                <button
+                  class="password-toggle"
+                  type="button"
+                  data-toggle-password="signinPassword"
+                  aria-label="Show password"
+                >
+                  <span>Show</span>
+                </button>
+                <small class="error" data-error-for="signinPassword"></small>
+              </div>
+
+              <div class="field-row">
+                <label class="checkbox">
+                  <input id="rememberMe" type="checkbox" />
+                  <span>Remember me</span>
+                </label>
+                <a href="#" class="text-link">Forgot password?</a>
+              </div>
+
+              <button class="primary-btn" type="submit">
+                <span class="btn-copy">Sign In</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+
+              <div class="divider"><span>or continue with</span></div>
+
+              <div class="social-grid">
+                <button class="social-btn" type="button" aria-label="Sign in with Google">
+                  <span>G</span>
+                  Google
+                </button>
+                <button class="social-btn" type="button" aria-label="Sign in with GitHub">
+                  <span>◈</span>
+                  GitHub
+                </button>
+                <button class="social-btn" type="button" aria-label="Sign in with Apple">
+                  <span></span>
+                  Apple
+                </button>
+              </div>
+            </form>
+
+            <form class="auth-form" id="signUpForm" novalidate>
+              <div class="field">
+                <input id="signupName" name="name" type="text" placeholder=" " />
+                <label for="signupName">Full name</label>
+                <small class="error" data-error-for="signupName"></small>
+              </div>
+
+              <div class="field">
+                <input id="signupEmail" name="email" type="email" placeholder=" " />
+                <label for="signupEmail">Email address</label>
+                <small class="error" data-error-for="signupEmail"></small>
+              </div>
+
+              <div class="field">
+                <input
+                  id="signupPassword"
+                  name="password"
+                  type="password"
+                  placeholder=" "
+                />
+                <label for="signupPassword">Create password</label>
+                <button
+                  class="password-toggle"
+                  type="button"
+                  data-toggle-password="signupPassword"
+                  aria-label="Show password"
+                >
+                  <span>Show</span>
+                </button>
+                <small class="error" data-error-for="signupPassword"></small>
+              </div>
+
+              <div class="strength-meter" aria-live="polite">
+                <div class="strength-bar">
+                  <span id="strengthFill"></span>
+                </div>
+                <p id="strengthText">Use 8+ characters with mixed case, numbers, and symbols.</p>
+              </div>
+
+              <div class="field">
+                <input
+                  id="signupConfirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  placeholder=" "
+                />
+                <label for="signupConfirmPassword">Confirm password</label>
+                <button
+                  class="password-toggle"
+                  type="button"
+                  data-toggle-password="signupConfirmPassword"
+                  aria-label="Show password"
+                >
+                  <span>Show</span>
+                </button>
+                <small class="error" data-error-for="signupConfirmPassword"></small>
+              </div>
+
+              <label class="checkbox checkbox-wide">
+                <input id="termsAccepted" type="checkbox" />
+                <span>I agree to the Terms & Conditions and Privacy Policy</span>
+              </label>
+              <small class="error inline-error" data-error-for="termsAccepted"></small>
+
+              <button class="primary-btn" type="submit">
+                <span class="btn-copy">Create Account</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+            </form>
+
+            <section class="otp-card" id="otpCard" aria-label="OTP verification">
+              <div class="otp-copy">
+                <p class="panel-kicker">Verification</p>
+                <h3>OTP verification</h3>
+                <p>Enter the 6-digit code we sent to secure your account creation.</p>
+              </div>
+              <div class="otp-inputs">
+                <input type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 1" />
+                <input type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 2" />
+                <input type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 3" />
+                <input type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 4" />
+                <input type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 5" />
+                <input type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 6" />
+              </div>
+              <button class="secondary-btn" id="verifyOtpBtn" type="button">
+                Verify Code
+              </button>
+            </section>
+          </div>
+
+          <p class="panel-footnote" id="panelFootnote">
+            New here?
+            <button class="inline-switch" type="button" data-mode-target="signup">
+              Create an account
+            </button>
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script1.js"></script>
+  </body>
+</html>

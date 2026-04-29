@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron Man</title>
+  <style>
+    img {
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Iron Man</h1>
+  <h3>
+    Iron Man, also known as Tony Stark, is one of Marvel’s most iconic superheroes...
+  </h3>
+  
+  <img src="iron-man-mark-iii-3840x2160-20054.jpg" alt="iron man" class="iron">
+  <img src="iron-man-mark-iii-3840x2160-20054.jpg" alt="iron man" class="iron">
+  <img src="iron-man-mark-iii-3840x2160-20054.jpg" alt="iron man" class="iron">
+
+  <button onclick="changeImage()">Change Style</button>
+
+  <script>
+    // let img=document.querySelectorAll(".iron")
+    // console.dir(img);
+    // for (let i of img){
+    //     i.src="marvel-rivals-iron-man-3840x2160-16120.jpg"
+    // }
+  //   function changeImage() {
+  //     let img= document.querySelectorAll(".iron");
+    
+  //     for (let i of img){
+  //       i.src="marvel-rivals-iron-man-3840x2160-16120.jpg"
+  //       i.style.width="500px";
+  //       i.style.height="300px";
+  //   }
+  //  }
+  // img.setAttribute("src","marvel-rivals-iron-man-3840x2160-16120.jpg")
+  // let img = document.querySelectorAll(".iron");
+// console.dir(img);
+//
+let img = document.querySelectorAll(".iron");
+console.dir(img);
+
+for (let i of img) {
+  i.setAttribute("src", "marvel-rivals-iron-man-3840x2160-16120.jpg");
+  i.style.width = "500px";
+  i.style.height = "300px";
+}
+// getattribute
+
+  </script>
+</body>
+</html>
