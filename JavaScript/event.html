@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    h1{
+        background-color: bisque;
+        color: brown;
+    }
+    .th1{
+        background-color: rgb(109, 221, 243);
+        color: rgba(49, 35, 244, 0.786);
+    }
+</style>
+</head>
+<body>
+    <div> 
+    <h1>Events</h1>
+    <!-- <button >click me </button> -->
+    <button id="th">change theme </button>
+    </div>
+    <script>
+
+        //   function changeH1(){
+        //     let h1=document.querySelector("h1")
+        //     h1.innerText="Hello"
+        // }
+
+        // let btn=document.querySelector("button")
+        // console.dir(btn)
+
+
+        function changeTheme(){
+            let div=document.querySelector("h1")
+            div.classList.toggle("th1")
+            }
+        
+            let btnelement =document.querySelector("button")
+            btnelement.addEventListener("click",changeTheme)
+
+
+    </script>
+</body>
+</html>

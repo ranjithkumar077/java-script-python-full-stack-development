@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+        #one{
+            width: auto;
+            height: 300px;
+            border: 5px solid rgb(227, 25, 25) ;
+        }
+    </style>
+
+<body>
+    <div id="one">
+        <button>button 1</button>
+        <button>button 2</button>
+
+    </div>
+    <script>
+
+        let div=document.getElementById("one")
+        let btn1=document.createElement("button")
+          btn1.innerText="button3"
+        div.insertAdjacentElement("beforebegin",btn1) 
+      
+
+        let btn2=document.createElement("button")
+        btn2.innerText="button4"
+        div.insertAdjacentElement("beforeend",btn2)
+        
+
+        let btn3=document.createElement("button")
+        btn3.innerText="button5"
+        div.insertAdjacentElement("afterbegin",btn3)
+        
+        
+        let btn4=document.createElement("button")
+        btn4.innerText="button6"
+        div.insertAdjacentElement("afterend",btn4)
+  
+    </script>
+</body>
+</html>

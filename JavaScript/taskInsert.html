@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        div{
+            border: 5px solid ;
+        }
+    </style>
+</head>
+<body><div>
+    <ol>
+        <li>apple</li>
+        <li>Banana</li>
+    </ol>
+    </div>
+    <script>
+
+    let ol= document.querySelector("ol");
+
+    let li1 = document.createElement("li");
+    li1.innerText = "Water Melon";
+    ol.insertAdjacentElement("afterbegin", li1);
+
+    let li2 = document.createElement("li");
+    li2.innerText = "Cherry";
+    ol.insertAdjacentElement("beforeend", li2);
+
+    let li3 = document.createElement("li");
+    li3.innerText = "Mango";
+    ol.children[2].insertAdjacentElement("beforebegin", li3);
+
+    let appleElement=document.querySelectorAll("#one li")[1];
+    console.dir(appleElement.innerText)
+    let mangoElement=document.createElement("li")
+    mangoElement.textContent=" mango"
+    appleElement.insertAdjacentElement("afterend",mangoElement)
+
+    //select or extract the particulkar element
+    let items = document.querySelectorAll("ol li");
+    console.log(items[0].innerText); 
+    console.log(items[2].innerText); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron Man</title>
+  <style>
+    img {
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Iron Man</h1>
+  <h3>
+    Iron Man, also known as Tony Stark, is one of Marvel’s most iconic superheroes...
+  </h3>
+  
+  <img src="iron-man-mark-iii-3840x2160-20054.jpg" alt="iron man" class="iron">
+  <img src="iron-man-mark-iii-3840x2160-20054.jpg" alt="iron man" class="iron">
+  <img src="iron-man-mark-iii-3840x2160-20054.jpg" alt="iron man" class="iron">
+
+  <button onclick="changeImage()">Change Style</button>
+
+  <script>
+    // let img=document.querySelectorAll(".iron")
+    // console.dir(img);
+    // for (let i of img){
+    //     i.src="marvel-rivals-iron-man-3840x2160-16120.jpg"
+    // }
+  //   function changeImage() {
+  //     let img= document.querySelectorAll(".iron");
+    
+  //     for (let i of img){
+  //       i.src="marvel-rivals-iron-man-3840x2160-16120.jpg"
+  //       i.style.width="500px";
+  //       i.style.height="300px";
+  //   }
+  //  }
+  // img.setAttribute("src","marvel-rivals-iron-man-3840x2160-16120.jpg")
+  // let img = document.querySelectorAll(".iron");
+// console.dir(img);
+//
+// let img = document.querySelectorAll(".iron");
+// console.dir(img);
+
+// for (let i of img) {
+//   i.setAttribute("src", "marvel-rivals-iron-man-3840x2160-16120.jpg");
+//   i.style.width = "500px";
+//   i.style.height = "300px";
+// }
+// getattribute
+function changeImage() {
+  // 1. Select all images with the class 'iron'
+  let images = document.querySelectorAll(".iron");
+  
+  // 2. Define the two image paths
+  const oldImg = "iron-man-mark-iii-3840x2160-20054.jpg";
+  const newImg = "marvel-rivals-iron-man-3840x2160-16120.jpg";
+
+  // 3. Loop through each image
+  for (let i of images) {
+    // Check if the current src contains the new image name
+    if (i.getAttribute("src") === newImg) {
+      // Switch back to OLD
+      i.setAttribute("src", oldImg);
+      i.style.width = "300px";
+      i.style.height = "200px";
+    } else {
+      // Switch to NEW
+      i.setAttribute("src", newImg);
+      i.style.width = "500px";
+      i.style.height = "300px";
+    }
+  }
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Hover Effect</title>
+  <style>
+    img {
+      width: 200px;
+      height: 150px;
+      transition: all 0.3s ease; /* smooth animation */
+    }
+    .over {
+      width: 250px;
+      height: 200px;
+    }
+    .container {
+      border: 5px solid black;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="bg.jpg" alt="hover image">
+  </div>
+
+  <script>
+    let img = document.querySelector("img");
+    img.addEventListener("mouseenter", () => {
+      img.classList.add("over");
+    });
+    img.addEventListener("mouseleave", () => {
+      img.classList.remove("over");
+    });
+  </script>
+</body>
+</html>
